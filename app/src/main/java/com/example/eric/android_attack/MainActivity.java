@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String package_name = "com.aaaaa";
                 String s = "pm uninstall " + package_name + "\n";
-                privilege.visitRuntime(s);
-                Log.i("privilege",  "privilege visitRuntime");
+                Privilege.visitRuntime(s);
+                Log.i("Privilege",  "Privilege visitRuntime");
             }
         });
     }

@@ -8,10 +8,9 @@ import java.io.InputStream;
  * Created by eric on 2018/4/10.
  */
 
-public  class privilege {
+public class Privilege {
 
     private static Process process = null;
-
 
     public static boolean visitRuntime(String... cmds)
     {

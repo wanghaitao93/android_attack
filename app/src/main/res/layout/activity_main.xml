@@ -10,7 +10,7 @@
         android:id="@+id/btn_runtime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="runtime"
+        android:text="root"
         tools:layout_editor_absoluteX="139dp"
         tools:layout_editor_absoluteY="203dp" />
 </android.support.constraint.ConstraintLayout>
