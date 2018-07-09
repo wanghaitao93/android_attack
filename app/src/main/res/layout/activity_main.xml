@@ -1,16 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.eric.android_attack.MainActivity">
 
+
     <Button
-        android:id="@+id/btn_runtime"
+        android:id="@+id/btn_root"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="root"
-        tools:layout_editor_absoluteX="139dp"
-        tools:layout_editor_absoluteY="203dp" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/btn_chmod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chmod"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <Button
+        android:id="@+id/btn_sh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sh"
+        android:layout_marginTop="140dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/btn_ps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ps"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <Button
+        android:id="@+id/btn_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="other"
+        android:layout_marginTop="260dp"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

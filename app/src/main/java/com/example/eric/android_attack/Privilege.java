@@ -1,5 +1,7 @@
 package com.example.eric.android_attack;
 
+import android.util.Log;
+
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,28 +13,29 @@ import java.io.InputStream;
 public class Privilege {
 
     private static Process process = null;
+    private static String TAG = "Privilege";
 
-    public static boolean visitRuntime(String... cmds)
+    public static boolean visitRuntime(String cmds)
     {
-        if (cmds == null || cmds.length == 0) {
-            return false;
-        }
 
         DataOutputStream dos = null;
         InputStream dis = null;
         try
         {
+            process = Runtime.getRuntime().exec(cmds);
 
-            process = Runtime.getRuntime().exec("su");
-
-            dos = new DataOutputStream(process.getOutputStream());
-
-            for (int i = 0; i < cmds.length; i++) {
-                dos.writeBytes(cmds[i] + " \n");
-            }
-            dos.writeBytes("exit \n");
+//            dos = new DataOutputStream(process.getOutputStream());
+//
+//            for (int i = 0; i < cmds.length; i++) {
+//                dos.writeBytes(cmds[i] + " \n");
+//            }
+//            dos.writeBytes("exit \n");
+//
+//            dos.flush();
 
             int code = process.waitFor();
+
+            Log.i(TAG, "runtime exec sucess ");
 
             return code == 0;
 
